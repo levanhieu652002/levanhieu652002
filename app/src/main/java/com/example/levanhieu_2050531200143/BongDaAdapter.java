@@ -8,6 +8,8 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import androidx.recyclerview.widget.RecyclerView;
+
 import java.util.List;
 
 public class BongDaAdapter extends BaseAdapter {
@@ -37,20 +39,19 @@ public class BongDaAdapter extends BaseAdapter {
     }
 
     @Override
-    public View getView(int i, View view, ViewGroup viewGroup) {
-
+    public View getView(int i, View converView, ViewGroup viewGroup) {
         LayoutInflater inflater= (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-         view  = inflater.inflate(layout, null);
+         converView  = inflater.inflate(layout, null);
         //ánh xạ view
-        TextView txtTen=(TextView) view.findViewById(R.id.textTen);
-        TextView txtMota= (TextView) view.findViewById(R.id.textMota);
-        ImageView imgHinh= (ImageView) view.findViewById(R.id.imageviewHinh);
+        TextView txtTen=(TextView) converView.findViewById(R.id.textTen);
+        TextView txtMota= (TextView) converView.findViewById(R.id.textMota);
+        ImageView imgHinh= (ImageView) converView.findViewById(R.id.imageviewHinh);
         //gán giá trị
         BongDa bongDa =bongDaList.get(i);
         txtTen.setText(bongDa.getTen());
         txtMota.setText(bongDa.getMoTa());
         imgHinh.setImageResource(bongDa.getHinh());
 
-        return view;
+        return converView;
     }
 }

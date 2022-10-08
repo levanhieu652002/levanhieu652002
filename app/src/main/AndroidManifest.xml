@@ -14,6 +14,21 @@
         android:theme="@style/Theme.LeVanHieu_2050531200143"
         tools:targetApi="31">
         <activity
+            android:name=".listkaka"
+            android:exported="false" />
+        <activity
+            android:name=".listramos"
+            android:exported="false" />
+        <activity
+            android:name=".listmessi"
+            android:exported="false" />
+        <activity
+            android:name=".list_ronaldo"
+            android:exported="false" />
+        <activity
+            android:name=".ProFile1_Activity"
+            android:exported="false" />
+        <activity
             android:name=".Home_Activity"
             android:exported="false" />
         <activity
