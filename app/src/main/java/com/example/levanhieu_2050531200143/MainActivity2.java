@@ -4,6 +4,7 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -60,15 +61,40 @@ public class MainActivity2 extends AppCompatActivity {
         lvBongDa= (ListView) findViewById(R.id.listviewTraiCay);
         arrayBongDa=new ArrayList<>();
         arrayBongDa.add(new BongDa("Cristiano Ronaldo","Ông vua Champions league ",R.drawable.ronaldo));
-        arrayBongDa.add(new BongDa("Leo Messi ","Ông hoàngr ê bóng",R.drawable.messi));
+        arrayBongDa.add(new BongDa("Leo Messi ","Ông hoàng rê bóng",R.drawable.messi));
         arrayBongDa.add(new BongDa("Zlatan Ibrahimovic","Kẻ ngông cuồng",R.drawable.ibraimmovic));
         arrayBongDa.add(new BongDa("Ricardo KaKa","Thiên thần của xứ sở Samba",R.drawable.kaka));
         arrayBongDa.add (new BongDa("Sergio Ramos ","Thiên thần hay ác quỷ ",R.drawable.ramos));
+        arrayBongDa.add( new BongDa(" Neymar JR" , " Vũ công samba Brazill",R.drawable.neymar));
+        arrayBongDa.add( new BongDa(" Lewandowski" , "Vua dội bom",R.drawable.lewando));
+        adapter = new BongDaAdapter(MainActivity2.this, R.layout.dong_trai_cay,arrayBongDa);
+        lvBongDa.setAdapter(adapter);
+        lvBongDa.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
+                if (position==0){
+                    Intent intent= new Intent();
+                    intent.setClass(MainActivity2.this, list_ronaldo.class);
+                    startActivity(intent);
+                }
+                if (position==1){
+                    Intent intent= new Intent();
+                    intent.setClass(MainActivity2.this, listmessi.class);
+                    startActivity(intent);
+                }
+                if (position==3){
+                    Intent intent= new Intent();
+                    intent.setClass(MainActivity2.this, listkaka.class);
+                    startActivity(intent);
+                }
+                if (position==4){
+                    Intent intent= new Intent();
+                    intent.setClass(MainActivity2.this, listramos.class);
+                    startActivity(intent);
+                }
 
-
+            }
+        });
 
     }
-
-
-
 }

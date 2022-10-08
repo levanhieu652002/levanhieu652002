@@ -4,9 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center">
-
-
+    android:gravity="center"
+    android:background="@drawable/nen1">
     <TextView
         android:id="@+id/textView"
         android:layout_width="257dp"
@@ -14,6 +13,8 @@
         android:gravity="center"
         android:text="Đăng Ký"
         android:textSize="48sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/holo_red_dark"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
@@ -55,19 +56,23 @@
         android:id="@+id/buttonhuy"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="@drawable/button_backgroud"
         android:text="Hủy"
+        android:textSize="18dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.167"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edtmk"
-        app:layout_constraintVertical_bias="0.247" />
+        app:layout_constraintVertical_bias="0.217" />
 
     <Button
         android:id="@+id/buttondongy"
         android:layout_width="109dp"
         android:layout_height="49dp"
+        android:background="@drawable/button_backgroud"
         android:text="Đồng ý"
+        android:textSize="18dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.708"
