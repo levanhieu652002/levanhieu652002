@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".listmessi"
+    android:background="@drawable/m10">
+
+    <TextView
+        android:id="@+id/txtleo"
+        android:layout_width="401dp"
+        android:layout_height="101dp"
+        android:text="Với phẩm chất thiên tài bẩm sinh, messi có thể rê bóng qua 4 5 người cùng 1 lúc.Tuy chỉ cao có vỏn vẹn 1m70.Tuy nhiên bằng kỹ thuật chắc chắn và tài năng của mình messi đã đem về những thành công nhất định của mình mà ai cũng phải công nhận "
+        android:textColor="#FFEB3B"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.184" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
